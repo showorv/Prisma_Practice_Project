@@ -4,6 +4,8 @@ import { postController } from "./post.controller"
 
 const router = express.Router()
 
+router.get ("/stats", postController.getBlogStats)
+
 router.post ("/", postController.createPost)
 router.get ("/", postController.getAllPost)
 router.get ("/:id", postController.getPostById)
